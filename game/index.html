@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Kebun Pasang</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./game.js"></script>
+</head>
+<body>
+<main>
+  <header><h1>Kebun Pasang</h1>
+    <p>Susun saluran. Mekarkan semua bunga. Antar air ke muara.</p></header>
+  <section id="intro" aria-labelledby="welcome">
+    <h2 id="welcome">Air kecil, kebun hidup</h2>
+    <p>Lewati semua bunga, lalu antar air dari tanda Masuk ke Muara. Tiga tutorial diikuti empat tantangan dengan pilihan jalur. Letak masuk dan muara ditunjukkan di setiap kebun.</p>
+    <p>Klik saluran untuk memutarnya 90° searah jarum jam. Setiap putaran memakai satu jatah. Batu tidak dapat diputar.</p>
+    <p>Tekan Alirkan saat siap. Air bergerak satu petak tiap 400 ms. Saluran terkunci saat air mengalir. Celah yang tidak tersambung, batu, tepi lain, atau saluran yang dikunjungi ulang menyebabkan gagal.</p>
+    <button id="start">Mulai berkebun</button>
+  </section>
+  <section id="play" hidden aria-label="Kebun permainan">
+    <div class="level-line"><h2 id="level-title"></h2><span id="level-number"></span></div>
+    <div class="hud" aria-label="Keadaan kebun"><span id="moves"></span><span id="flowers"></span><span id="phase"></span></div>
+    <p id="endpoints"></p>
+    <div class="garden">
+      <span class="bank inlet"><span>Masuk →</span><svg viewBox="0 0 120 70" aria-hidden="true"><path class="river" d="M0 4 Q44 6 70 26 L120 26 V44 H70 Q38 63 0 66 Z"/><path class="ripple" d="M8 23 Q34 24 52 32 M13 47 Q31 45 42 41"/></svg></span>
+      <div id="board" role="group" aria-label="Papan kebun"></div>
+      <span class="bank outlet"><span>→ Muara</span><svg viewBox="0 0 120 70" aria-hidden="true"><path class="river" d="M0 4 Q44 6 70 26 L120 26 V44 H70 Q38 63 0 66 Z"/><path class="ripple" d="M8 23 Q34 24 52 32 M13 47 Q31 45 42 41"/></svg></span>
+    </div>
+    <p id="status" role="status" aria-live="polite" aria-atomic="true"></p>
+    <div class="controls"><button id="restart">Ulangi (R)</button><button id="undo">Urungkan</button><button id="flow">Alirkan (Enter)</button><button id="next" hidden>Lanjut</button></div>
+    <p id="hint"></p>
+    <details><summary>Aturan dan kendali</summary>
+      <p>Tujuan: lewati semua bunga lalu keluar ke tanda Muara. Satu klik = satu putaran 90° searah jarum jam. Urungkan mengembalikan putaran dan jatah. Saat jatah nol, Urungkan, Alirkan, dan Ulangi tetap tersedia.</p>
+      <p>Tab memilih tombol; panah memindahkan pilihan saluran; Spasi memutar; Enter mengalirkan; R mengulang. Ulangi selalu membatalkan aliran lama. Saluran dan Urungkan terkunci setelah Alirkan. Bunga menutup saat kuncup; kelopak terbuka saat mekar.</p>
+    </details>
+  </section>
+  <footer>Tanpa batas waktu · tujuh kebun tetap · tanpa undian</footer>
+</main>
+</body>
+</html>
