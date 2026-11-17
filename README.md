@@ -1,5 +1,16 @@
 # Kebun Pasang
 
+[![make.fun best-game-01](https://make.fun/badge/best-game-01.svg)](https://make.fun/bounty/best-game-01)
+
+[![make.fun rank](https://make.fun/badge/best-game-01/cozicoo/kebun-pasang-best-game-01/rank.svg)](https://make.fun/bounty/best-game-01)
+[![make.fun reward](https://make.fun/badge/best-game-01/cozicoo/kebun-pasang-best-game-01/reward.svg)](https://make.fun/bounty/best-game-01)
+
+Proposed repository: https://github.com/cozicoo/kebun-pasang-best-game-01 — not
+created, published or publicly verified. Rank/reward badges use official live
+endpoints; no rank or reward result is claimed. GitHub About website
+https://make.fun/bounty/best-game-01 and topic `makefun` remain pending authorized
+publication.
+
 A seven-level botanical tidal-garden tutorial/challenge prototype, not a final
 prize candidate. Vanilla HTML/CSS/JS, local system fonts, locally drawn SVG
 channels and SVG/CSS plants; no external assets, libraries, installation or build step.
@@ -152,7 +163,7 @@ is not implied. No browser/server/detector was run here.
 After reading/reviewing all changed executable sources and tests, approved Node ran:
 
 ```powershell
-& 'C:/Users/varal/OpenBot/Agents/agent-994ad623-487d-4534-be59-ab82849ad1dd/tools/node-v22.18.0-win-x64/node.exe' --test tests/logic.test.js tests/challenges.test.js
+node --test tests/logic.test.js tests/challenges.test.js
 ```
 
 Actual result: **45 passed, 0 failed, 0 skipped; exit 0**. The original 23 tests
@@ -338,7 +349,7 @@ The original tutorial-only suite used the following Node 22.18 command. The
 current full 45-test command/result is recorded in the v3 section above:
 
 ```powershell
-& 'C:/Users/varal/OpenBot/Agents/agent-994ad623-487d-4534-be59-ab82849ad1dd/tools/node-v22.18.0-win-x64/node.exe' --test tests/logic.test.js
+node --test tests/logic.test.js
 ```
 
 Historical tutorial-suite result after source review:
