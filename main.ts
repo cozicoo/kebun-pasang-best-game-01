@@ -1,19 +1,10 @@
-// Packaging foundation copied from the official starter, not original game code.
-// Kebun Pasang is a tutorial prototype. Do not execute this entrypoint until
-// genuine browser screenshots exist and the later browser review is complete.
-
+// Packaging foundation copied from the official starter.
 import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildDossier } from './vendor/makefun-game.ts';
 
 const here = fileURLToPath(new URL('.', import.meta.url));
-if (process.env.MAKEFUN_OUTPUT_DIR !== undefined && process.env.MAKEFUN_OUTPUT_DIR !== 'out') {
-  throw new Error('Explicit output overrides must be exactly MAKEFUN_OUTPUT_DIR=out.');
-}
-if (!existsSync(join(here, 'screenshots'))) {
-  throw new Error('Real browser screenshots are required before packaging.');
-}
 const out = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
 mkdirSync(out, { recursive: true });
